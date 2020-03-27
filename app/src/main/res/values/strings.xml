@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Pistagramm</string>
+
+    <string name="back4app_server_url">https://parseapi.back4app.com/</string>
+
+    <!-- Change the following strings as required -->
+    <string name="back4app_app_id">CAi6Lke5sBPbqc3AUHrSgCWqAfH1ntrImDV8yEgo</string>
+    <string name="back4app_client_key">urAnMxvblf7ItLGSgmNbn4GrTM7DReZxuURp13FH</string>
+</resources>
