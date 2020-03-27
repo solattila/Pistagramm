@@ -26,6 +26,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
     private TextView txtData;
     private Button btnAllData;
     private String allKickboxers;
+    private Button btnTransition;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +43,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
         edtKP = findViewById(R.id.edtKP);
         txtData = findViewById(R.id.txtData);
         btnAllData = findViewById(R.id.btnAllData);
+        btnTransition = findViewById(R.id.btnNextAct);
 
         txtData.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,6 +68,9 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
                 allKickboxers = "";
 
                 ParseQuery<ParseObject> queryAll = ParseQuery.getQuery("KickBoxer");
+
+                queryAll.whereGreaterThan("punchpower", 100);
+
                 queryAll.findInBackground(new FindCallback<ParseObject>() {
                     @Override
                     public void done(List<ParseObject> objects, ParseException e) {
@@ -89,6 +94,13 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
                         }
                     }
                 });
+
+            }
+        });
+
+        btnTransition.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
             }
         });
